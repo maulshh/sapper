@@ -310,6 +310,7 @@ export function get_page_handler(
 				styles = Array.from(css_chunks)
 					.map(href => `<link rel="stylesheet" href="client/${href}">`)
 					.join('')
+				styles = `</style>${styles}<style>`
 			} else {
 				styles = (css && css.code ? css.code : '');
 			}
